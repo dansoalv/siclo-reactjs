@@ -1,8 +1,17 @@
 import React from 'react'
-import imgMain from '../Assets/bici.png'
 import '../CSS/cart.css'
+import RegisterComponent from "./shared/register.component";
 
 const BisiComponent = () => {
+    const arrayImgs = [
+        '../Assets/bisi1.jpg',
+        '../Assets/bisi2.jpg',
+        '../Assets/bisi3.jpg',
+        '../Assets/bisi4.jpg',
+        '../Assets/bisi5.jpg',
+    ]
+    let imgMain = require('../Assets/bisi1.jpg')
+
     return (
         <React.Fragment>
             <div className="box-container-info">
@@ -16,7 +25,7 @@ const BisiComponent = () => {
                 <div className="container box-container-main">
                     <div className="row align-items-center">
                         <div className="col-7 text-center">
-                            <img className="img-main" src={{imgMain}} alt="Galeria"/>
+                            <img className="img-main" src={imgMain} alt="Galeria"/>
                                 <div className="thumbs">
 
                                 </div>
@@ -170,7 +179,7 @@ const BisiComponent = () => {
                             </button>
                         </div>
                         <div className="modal-body">
-
+                            <RegisterComponent/>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn-register">Enviar</button>
